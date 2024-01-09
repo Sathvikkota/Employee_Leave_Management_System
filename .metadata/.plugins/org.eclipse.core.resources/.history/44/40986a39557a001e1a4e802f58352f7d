@@ -1,0 +1,62 @@
+<%@ page contentType="text/html; charset=ISO-8859-1" isELIgnored="false"%>
+<%@ taglib uri="jakarta.tags.core" prefix="c"%>
+
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background-image: url('image/dd.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<%@ include file="adminnavbar.jsp" %>
+
+<br>
+
+<h3 align="center"><u>Manager Profile</u></h3>
+
+<div class="box">
+    <div class="content">
+        <div class="image">
+            <img src="displayprofilepic?id=<c:out value='${mng.id}' />" alt="Profile Image">
+        </div>
+        <div class="level">
+            <p>MANAGER</p>
+        </div>
+        <div class="text">
+            <p class="name">ID: ${mng.id}</p>
+            <p class="name">Name: ${mng.name}</p>
+            <p class="name">DOB: ${mng.dateofbirth}</p>
+            <p class="name">Department: ${mng.department}</p>
+            <p class="name">Salary: ${mng.salary}</p>
+            <p class="name">Email: ${mng.email}</p>
+            <p class="name">Location: ${mng.location}</p>
+            <p class="name">Contact: ${mng.contact}</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
