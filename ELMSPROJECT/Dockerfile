@@ -1,5 +1,5 @@
 # Use the official OpenJDK image
-FROM openjdk:20
+FROM openjdk:20-jdk
 
 # Set the working directory
 WORKDIR /app
