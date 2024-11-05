@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "ELMSPROJECT/Dockerfile", 
+      "src": "ELMSPROJECT/Dockerfile",
       "use": "@vercel/docker"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app.war"  
+      "dest": "/app.war"
     }
   ]
 }
